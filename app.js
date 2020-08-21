@@ -3,7 +3,7 @@
 @return {number}
 */
 console.log(romanToInt("MCMXCIV"));
-var romanToInt = function(s) {
+function romanToInt(s) {
     
     let dict = {
         I: 1,
@@ -14,14 +14,14 @@ var romanToInt = function(s) {
         D: 500,
         M: 1000
     };
-      let result = 0;
-      for (let i = 0; i < s.length; i++) {  
-          if (dict[s[i]]<dict[s[i+1]]) {    
-            result -= dict[s[i]];    
-        } else {
-            result += dict[s[i]]; 
-        } 
-      }
-      return result;
+        let result = 0;
+        for (let i = 0; i < s.length; i++) {  
+            if (dict[s[i]]<dict[s[i+1]]) {    
+                result -= dict[s[i]];    
+            } else {
+                result += dict[s[i]]; 
+            } 
+        }
+        return result;
     };
 
